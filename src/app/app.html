@@ -1,1 +1,42 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content" id="myMenu">
+	<ion-header>
+		<ion-toolbar color="primary">
+			<ion-title>Menu</ion-title>
+		</ion-toolbar>
+	</ion-header>
+
+	<ion-content>
+		<div class="menu-profile">
+			<img class="profile-image" src="https://bit.ly/2xMLIcU" />
+			<h4 style="text-align:center;">
+				{{user.nome}}
+			</h4>
+      <p style="text-align:center;">
+				{{user.email}}
+			</p>
+		</div>
+
+		<hr>
+		<div class="menu-list">
+			<ion-list *ngFor="let page of pages">
+				<button ion-item detail-none no-lines (click)="openPage(page)">
+          <ion-icon item-start [name]="page.icon"></ion-icon>
+          <h2>{{page.title}}</h2>
+          <ion-icon *ngIf="page.subPages" item-end [name]="selectedMenu == page ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+        </button>
+
+				<div [hidden]="selectedMenu != page">
+					<ion-list *ngFor="let subPage of page.subPages" style="margin-left: 40px;">
+						<button ion-item (click)="openPage(subPage)">
+              <ion-icon item-start [name]="subPage.icon"></ion-icon>
+              <h2>{{subPage.title}}</h2>
+            </button>
+					</ion-list>
+				</div>
+			</ion-list>
+		</div>
+
+	</ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

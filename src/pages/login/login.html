@@ -1,0 +1,36 @@
+<ion-content ion-fixed padding>
+  <div class="login-content">
+    <div padding-horizontal text-center class="animated fadeInDown">
+      <div class="logo"></div>
+      <img src="https://bit.ly/2DvQh1u" />
+    </div>
+    <form #form="ngForm" (submit)="login(form)">
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+          Email
+        </ion-label>
+        <ion-input name="email" type="email" ngModel></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+          Senha
+        </ion-label>
+        <ion-input name="senha" type="password" ngModel></ion-input>
+      </ion-item>
+      <div>
+        <button ion-button outline icon-start block color="primary" tappable>
+          <ion-icon name="log-in"></ion-icon>Entrar
+        </button>
+        <p text-center margin-top ion-text color="primary" tappable (click)="forgotpassword()"><strong>Esqueceu a Senha?</strong></p>
+      </div>
+
+      <div text-center margin-top>
+        <span ion-text color="primary" tappable (click)="registrar()">Novo Aqui? <strong>Cadastre-se</strong></span>
+      </div>
+    </form>
+  </div>
+
+</ion-content>

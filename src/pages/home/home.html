@@ -1,14 +1,73 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+	<ion-navbar color="primary">
+		<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<ion-title>Home</ion-title>
+	</ion-navbar>
+
+	<ion-toolbar #head>
+		<ion-grid>
+			<ion-buttons>
+				<ion-row>
+					<ion-col col-7>
+						<button ion-button icon-only>
+              <ion-icon name="list"></ion-icon>
+            </button>
+						<button ion-button icon-only clear>
+              <ion-icon name="pin"></ion-icon>
+            </button>
+            	<button (click)="go_cadastroimoveis();" ion-button icon-only>
+              <ion-icon name="add"></ion-icon>
+            </button>
+					</ion-col>
+					<ion-col col-5>
+						<button (click)="openPage()" ion-button icon-end clear >
+        <span>Filtrar</span>
+        <ion-icon name="search"></ion-icon>
+      </button>
+					</ion-col>
+				</ion-row>
+			</ion-buttons>
+		</ion-grid>
+	</ion-toolbar>
+
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<!-- <ion-content hide-head [header]='head'></ion-content> -->
+<ion-content>
+    <!-- <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content refreshingSpinner="crescent"></ion-refresher-content>
+    </ion-refresher> -->
+
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col *ngFor="let i of items | async" col-12>
+          <ion-card>
+            <div class ="container-imgem" (click)="go_locationpage(i.id);">
+              <img src="https://cdnimages.familyhomeplans.com/plans/75977/75977-b600.jpg" />
+            </div>
+            <ion-card-content>
+            <ion-grid padding>
+        <ion-row>
+          <ion-col width-66>
+            <h4 ion-text color="primary">{{i.tipo_imovel}} - {{i.cidade}}</h4>
+            <div>
+              <span class="bold">R: {{i.endereco}}</span>
+            </div>
+          </ion-col>
+          <ion-col col-4>
+            <h2 ion-text color="primary" class="bold" >R$ {{i.valor}}</h2>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!-- <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content loadingSpinner="crescent"></ion-infinite-scroll-content>
+    </ion-infinite-scroll> -->
 </ion-content>
