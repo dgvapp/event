@@ -24,8 +24,10 @@ export class MyApp {
   constructor(public platform: Platform, private statusBar: StatusBar, splashScreen: SplashScreen, private menuService: MenuService, 
     public menuCtrl: MenuController, private afAuth: AngularFireAuth, private menu: MenuController, private banco: AngularFirestore) {
     menu.enable(false, 'myMenu');
-    platform.ready().then(() => {
+    platform.ready().then(() => {    
+      statusBar.styleDefault();
       this.pages = menuService.getAll();
+      
       afAuth.auth.onAuthStateChanged((user) => {
         if (user != null) {
           let sub = this.banco.collection('usuarios').doc(user.uid).valueChanges().subscribe((usuario) => {
@@ -39,8 +41,7 @@ export class MyApp {
           this.rootPage = LoginPage;
         }
       })
-
-      statusBar.styleDefault();
+      
       splashScreen.hide();
     });
   }

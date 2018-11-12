@@ -20,11 +20,11 @@ export class LoginPage {
 
   public login(form: NgForm): void {
 
-    // let email = form.value.email;
-    // let senha = form.value.senha;
+    let email = form.value.email;
+    let senha = form.value.senha;
 
-    let email = "vini@email.com";
-    let senha = "123123";
+    // let email = "vini@email.com";
+    // let senha = "123123";
 
     console.log(email, senha);
 
