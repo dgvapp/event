@@ -1,0 +1,107 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<ion-title>Pesquisar</ion-title>
+	</ion-navbar>
+
+	
+	<ion-card>
+
+		<ion-card-header>
+
+		</ion-card-header>
+
+
+		<ion-card-content>
+
+			<ion-list>
+				<ion-item>
+					<ion-label>TIPO IMÓVEL</ion-label>
+					<ion-select [(ngModel)]="type">
+						<ion-option value="casa">Casa</ion-option>
+						<ion-option value="apartamento">Apartamento</ion-option>
+						<ion-option value="chacara">Chacara</ion-option>
+						<ion-option value="Sitio">Sitio</ion-option>
+					</ion-select>
+				</ion-item>
+			</ion-list>
+		</ion-card-content>
+
+	</ion-card>
+	<br>
+	<ion-card>
+
+		<ion-card-header>
+
+		</ion-card-header>
+
+
+		<ion-card-content>
+			<ion-list>
+				<ion-item>
+					<ion-label>ESTADO</ion-label>
+					<ion-select [(ngModel)]="states">
+						<ion-option value="1">1</ion-option>
+						<ion-option value="2">2</ion-option>
+						<ion-option value="3">3</ion-option>
+						<ion-option value="4">4</ion-option>
+					</ion-select>
+				</ion-item>
+			</ion-list>
+		</ion-card-content>
+
+	</ion-card>
+	<br>
+	<ion-card>
+
+		<ion-card-header>
+
+		</ion-card-header>
+
+
+		<ion-card-content>
+			<ion-list>
+				<ion-item>
+					<ion-label>CIDADES</ion-label>
+					<ion-select [(ngModel)]="cities">
+						<ion-option value="5">1</ion-option>
+						<ion-option value="6">2</ion-option>
+						<ion-option value="7">3</ion-option>
+						<ion-option value="8">4</ion-option>
+					</ion-select>
+				</ion-item>
+			</ion-list>
+		</ion-card-content>
+
+	</ion-card>
+	<br>
+	<ion-card>
+
+		<ion-card-header>
+
+		</ion-card-header>
+
+
+		<ion-card-content>
+			<ion-list>
+				<ion-item>
+					<ion-label>VALOR</ion-label>
+					<ion-select [(ngModel)]="values">
+						<ion-option value="9">1</ion-option>
+						<ion-option value="10">2</ion-option>
+						<ion-option value="11">3</ion-option>
+						<ion-option value="12">4</ion-option>
+					</ion-select>
+				</ion-item>
+			</ion-list>
+		</ion-card-content>
+
+	</ion-card>
+
+	<div>
+    <button ion-button outline icon-start block color="primary" tappable>
+        <ion-icon name="search"></ion-icon>Ir</button>
+       
+		</div>

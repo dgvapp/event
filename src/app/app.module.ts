@@ -9,10 +9,16 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
 
-import { MenuInterface, MenuService, DataBase } from '../providers';
+import { MenuInterface, MenuService} from '../providers';
 
 import { MyApp } from './app.component';
-import { HomePage, LoginPage } from '../pages';
+
+import { HomePage, LoginPage, ProfilePage, FiltersComponent, EditarImoveisComponent, EditarContaComponent } from '../pages';
+import {LocationpageComponent } from '../pages/locationpage/locationpage.component';
+import { CadastroUsuarioComponent } from '../pages/cadastro-usuario/cadastro-usuario.component';
+import { ForgotpasswordComponent } from '../pages/forgotpassword/forgotpassword.component';
+import {CadastroImoveisComponent} from '../pages/cadastro-imoveis/cadastro-imoveis.component';
+import {AvaliacaoComponent} from '../pages/avaliacao/avaliacao.component';
 
 const config = {
   apiKey: "AIzaSyAYAzVAqyPVGiNI93zBrhMIBMksMPhrqeU",
@@ -27,7 +33,16 @@ const config = {
   declarations: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    ProfilePage,
+    FiltersComponent,
+    LocationpageComponent,
+    CadastroUsuarioComponent,
+    ForgotpasswordComponent,
+    CadastroImoveisComponent,
+    AvaliacaoComponent,
+    EditarImoveisComponent,
+    EditarContaComponent
   ],
   imports: [
     BrowserModule,
@@ -41,12 +56,21 @@ const config = {
   entryComponents: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    ProfilePage,
+    FiltersComponent,
+    LocationpageComponent,
+    CadastroUsuarioComponent,
+    ForgotpasswordComponent,
+    CadastroImoveisComponent,
+    AvaliacaoComponent,
+    EditarImoveisComponent,
+    EditarContaComponent
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}, MenuService, DataBase
+    {provide: ErrorHandler, useClass: IonicErrorHandler}, MenuService
   ]
 })
 export class AppModule {}

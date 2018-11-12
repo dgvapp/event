@@ -1,0 +1,82 @@
+<!-- -->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Informações</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="checkout-trip common-bg">
+ 
+  <!--trip information-->
+  <div class="trip-info card round">
+    <div class="trip-image border-bottom" style="background-image:url('https://odis.homeaway.com/odis/listing/6c69d1fd-5bdc-42a9-85f6-0bf48e1c4c84.c10.jpg ');"></div>
+    <ion-grid padding>
+      <ion-row>
+        <ion-col width-66>
+          <h6 ion-text color="primary">{{evento.tipo_imovel}} - {{evento.cidade}}</h6>
+          <div>
+            <span class="bold">{{evento.endereco}}</span>
+          </div>
+          <div margin-top>
+            <span ion-text color="primary">Descrição </span>
+            <br/>
+            <span ion-text>{{evento.descricao}}</span>
+          </div>
+        </ion-col>
+        <ion-col col-4>
+          <span ion-text>Valor</span>
+          <h5 ion-text color="primary" class="bold" no-margin>R$ {{evento.valor}}</h5>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+    <!--more info-->
+  <h5 ion-text color="primary" >Contato</h5>
+  <div class="card round" margin-top>
+
+    <ion-list no-margin>
+      <ion-item class="primary-bg">
+        <ion-avatar item-start>
+          <img src="https://theblueraft.files.wordpress.com/2010/08/aang.jpg">
+        </ion-avatar>
+        <h2 ion-text class="text-white bold">{{proprietario.nome}}</h2>
+        <p ion-text class="text-secondary bold">Data cadastro: {{proprietario.dataCadastro | date: 'dd/MM/yyyy'}}</p>
+      </ion-item>
+    </ion-list>
+
+    <div padding>
+      <ion-item no-padding>
+        <ion-label color="primary" stacked>Nome</ion-label>
+        <ion-input type="text" disabled [value]="proprietario.nome"></ion-input>
+      </ion-item>
+      <ion-item no-padding>
+        <ion-label color="primary" stacked>Telefone</ion-label>
+        <ion-input type="text" disabled [value]="proprietario.telefone"></ion-input>
+      </ion-item>
+      <ion-item no-padding>
+        <ion-label color="primary" stacked>E-mail</ion-label>
+        <ion-input type="text" disabled [value]="proprietario.email"></ion-input>
+      </ion-item>
+
+   
+    </div>
+     
+  </div>
+    <ion-fab right bottom>
+    <button ion-fab mini color="primary"><ion-icon name="more"></ion-icon></button>
+    <ion-fab-list side="left">
+      <button ion-fab><ion-icon name="calendar"></ion-icon></button>
+      <button ion-fab><ion-icon name="map"></ion-icon></button>
+      <button ion-fab><ion-icon name="heart-outline"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+  
+  
+  
+ 
+</ion-content>
+

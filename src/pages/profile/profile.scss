@@ -1,0 +1,26 @@
+ion-header {
+  ion-navbar {
+    
+  }
+
+  ion-toolbar{
+    height: 50px;
+    min-height: 50px;
+    z-index: -1;
+  }
+}
+
+.header-md::after {
+  z-index: 10;
+  top: 55px;
+}
+
+ion-content {
+  ion-card{
+    position: relative;
+
+    .container-imgem {
+      
+    }
+  }
+}

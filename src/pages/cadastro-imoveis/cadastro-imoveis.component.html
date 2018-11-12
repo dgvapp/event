@@ -1,0 +1,69 @@
+<ion-header>
+
+	<ion-navbar color="primary">
+		<ion-title>Criar Anúncio</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="auth-page">
+	<div class="login-content">
+
+
+		<form class="list-form" #form="ngForm" (submit)="cadastro_publicacao(form)">
+
+
+			<ion-item text-center>
+				<button  ion-button outline icon-start  color="primary">Selecionar Foto</button>
+      </ion-item>
+      
+				<ion-item>
+					<ion-label>Tipo de Imóvel</ion-label>
+					<ion-select name="tipo_imovel" ngModel>
+						<ion-option value="Casa">Casa</ion-option>
+						<ion-option value="Apartamento">Apartamento</ion-option>
+						<ion-option value="Chacara">Chacara</ion-option>
+						<ion-option value="Sitio">Sitio</ion-option>
+					</ion-select>
+				</ion-item>
+		<ion-item>
+					<ion-label>Cidade</ion-label>
+					<ion-select  name="cidade" ngModel>
+						<ion-option value="São José do Rio Preto">São José do Rio Preto</ion-option>
+						<ion-option value="Cedral">Cedral</ion-option>
+						<ion-option value="Mirassol">Mirassol</ion-option>
+						<ion-option value="José Bonifácio">José Bonifácio</ion-option>
+					</ion-select>
+				</ion-item>
+			<ion-item>
+				<ion-label floating>
+					Endereço (rua) - nº
+				</ion-label>
+				<ion-input name="endereco" type="text" ngModel></ion-input>
+			</ion-item>
+		<ion-item>
+				<ion-label floating>
+					Preço R$
+				</ion-label>
+				<ion-input  name="valor" type="number" ngModel></ion-input>
+			</ion-item>
+      	<ion-item>
+				<ion-label floating>
+				Descrição
+				</ion-label>
+				<ion-textarea name="descricao" type="text" ngModel rows="4"></ion-textarea>
+			</ion-item>
+		<div margin-top>
+			<button ion-button outline icon-start  block color="primary" tappable >
+       Cadastrar
+      </button>
+		</div>
+</form>
+<!--   
+		<div text-center margin-top>
+			<span ion-text color="primary">Cancelar</span>
+		</div> -->
+	</div>
+  
+</ion-content>

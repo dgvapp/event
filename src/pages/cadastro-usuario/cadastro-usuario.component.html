@@ -1,0 +1,72 @@
+<!-- -->
+<ion-content class="auth-page">
+	<div class="login-content">
+
+		<!-- Logo -->
+		<div padding-horizontal text-center class="animated fadeInDown">
+			<div class="logo"></div>
+			<img src=" https://bit.ly/2xBwcS8" />
+	</div>
+
+		<!-- Login form -->
+		<form class="list-form" #form="ngForm" (submit)="salvar(form)">
+      	<!-- <ion-item>
+				<ion-label floating>
+					<ion-icon name="image" item-start class="text-primary"></ion-icon>
+					Foto
+				</ion-label>
+				<ion-input type="text"></ion-input>
+			</ion-item> -->
+			<ion-item>
+				<ion-label floating>
+					<ion-icon name="person" item-start class="text-primary"></ion-icon>
+					Nome
+				</ion-label>
+				<ion-input name="nome" type="text" ngModel></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label floating>
+					<ion-icon name="call" item-start class="text-primary"></ion-icon>
+					Telefone
+				</ion-label>
+				<ion-input name="telefone" type="text" ngModel></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label floating>
+					<ion-icon name="mail" item-start class="text-primary"></ion-icon>
+					Email
+				</ion-label>
+				<ion-input name="email" type="email" ngModel></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label floating>
+					<ion-icon name="lock" item-start class="text-primary"></ion-icon>
+					Senha
+				</ion-label>
+				<ion-input name="senha" type="password" ngModel></ion-input>
+			</ion-item>
+      
+      	<ion-item>
+				<ion-label floating>
+					<ion-icon name="lock" item-start class="text-primary"></ion-icon>
+					Confirmar Senha
+				</ion-label>
+				<ion-input name="confsenha" type="password" ngModel></ion-input>
+			</ion-item>
+
+		<div margin-top>
+			<button ion-button outline icon-start  block color="primary" tappable>
+        Registre-se
+      </button>
+		</div>
+		<div text-center margin-top>
+			<span ion-text color="primary" tappable (click)="login()">Eu já tenho uma conta!</span>
+		</div>
+    </form>
+	</div>
+  
+  
+</ion-content>

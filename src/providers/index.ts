@@ -1,2 +1,1 @@
-export * from './menu/menu.service'
-export * from './bd/bd.service'
+export * from './menu/menu.service';

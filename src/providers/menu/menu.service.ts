@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 
-import { HomePage, LoginPage } from '../../pages';
+
+import { HomePage, ProfilePage, LoginPage, AvaliacaoComponent } from '../../pages';
+import { EditarContaComponent } from '../../pages/editar-conta/editar-conta.component'
 
 export interface MenuInterface {
   title: string;
@@ -15,9 +17,9 @@ export class MenuService {
 
   itens: MenuInterface[] = [
     { title: "Inicio", component: HomePage, icon: "home" },
-    { title: "Minhas Publicações", component: null, icon: "list-box", },
+    { title: "Minhas Publicações", component: AvaliacaoComponent, icon: "list-box", },
     // { title: "Favoritos", component: HomePage, icon: "heart-outline" },
-    { title: "Configurações", component: null, icon: "cog" },
+    { title: "Configurações", component: EditarContaComponent, icon: "cog" },
     { title: "Sair", component: LoginPage, icon: "log-out" }
   ];
 

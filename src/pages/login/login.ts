@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController, MenuController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, Content, MenuController } from 'ionic-angular';
 
 import { AlertController } from 'ionic-angular';
 import { NgForm } from '@angular/forms';
