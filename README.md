@@ -3,7 +3,7 @@ Trabalho da Faculdade
 
 ## Pré-requisitos
 
-Necessario o [Ionic, Cordova](#ionic-e-cordova), [Android Studio](#android-studio) e o [JDK/Java](#jdk-java)
+Necessario o [Ionic, Cordova](#ionic-e-cordova), [Android Studio](#android-studio) e o [JDK/Java](#jdk--java)
 ### Ionic e Cordova
 ```
 npm install ionic cordova -g
