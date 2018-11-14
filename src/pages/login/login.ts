@@ -6,6 +6,8 @@ import { NgForm } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 import { HomePage } from '..';
+import { ForgotpasswordComponent } from '../forgotpassword/forgotpassword.component';
+import { CadastroUsuarioComponent } from '../cadastro-usuario/cadastro-usuario.component';
 
 @Component({
   selector: 'page-login',
@@ -37,14 +39,14 @@ export class LoginPage {
   }
 
   public registrar(): void {
-    // this.navCtrl.push(CadastroUsuarioComponent);
+    this.navCtrl.push(CadastroUsuarioComponent);
   }
   public sair(): void {
     this.navCtrl.setRoot(LoginPage);
     this.afAuth.auth.signOut();
   }
   public forgotpassword(): void {
-    // this.navCtrl.push(ForgotpasswordComponent);
+    this.navCtrl.push(ForgotpasswordComponent);
   }
   public go_locationpages(): void {
     this.navCtrl.setRoot(HomePage);
