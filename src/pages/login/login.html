@@ -23,12 +23,16 @@
       <div>
         <button ion-button outline icon-start block color="primary" tappable>
           <ion-icon name="log-in"></ion-icon>Entrar
-        </button>
-        <p text-center margin-top ion-text color="primary" tappable (click)="forgotpassword()"><strong>Esqueceu a Senha?</strong></p>
+        </button>  
       </div>
 
       <div text-center margin-top>
-        <span ion-text color="primary" tappable (click)="registrar()">Novo Aqui? <strong>Cadastre-se</strong></span>
+          <button ion-button outline icon-start block color="primary" (click)="forgotpassword()" tappable>
+              Esqueceu a Senha?
+            </button>
+          <button ion-button outline icon-start block color="primary" (click)="registrar()" tappable>
+              Novo Aqui? <strong>Cadastre-se</strong>
+            </button>
       </div>
     </form>
   </div>
